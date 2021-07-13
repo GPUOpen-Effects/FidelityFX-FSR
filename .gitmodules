@@ -1,0 +1,6 @@
+[submodule "sample/libs/Cauldron"]
+	path = sample/libs/Cauldron
+	url = ../../GPUOpen-LibrariesAndSDKs/Cauldron
+[submodule "sample/media/Cauldron-Media"]
+	path = sample/media/Cauldron-Media
+	url =  ../../GPUOpen-LibrariesAndSDKs/Cauldron-Media

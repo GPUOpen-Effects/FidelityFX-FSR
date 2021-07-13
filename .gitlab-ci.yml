@@ -1,0 +1,60 @@
+variables:
+  SampleName: FSRSample
+  CMakeConfig: -G "Visual Studio 16 2019" -A x64
+  GIT_SUBMODULE_STRATEGY: normal
+
+stages:
+  - build
+  - deploy
+
+build_dx12:
+  tags:
+  - windows
+  - amd64
+  stage: build
+  script:
+  - 'cmake -S sample -B sample/build/DX12 -DGFX_API=DX12 %CMakeConfig%'
+  - 'cmake --build sample/build/DX12 --config Release'
+  artifacts:
+    paths:
+    - sample/
+
+build_vulkan:
+  tags:
+  - windows
+  - amd64
+  stage: build
+  script:
+  - 'cmake -S sample -B sample/build/VK -DGFX_API=VK %CMakeConfig%'
+  - 'cmake --build sample/build/VK --config Release'
+  artifacts:
+    paths:
+    - sample/
+
+package_sample:
+  tags:
+  - windows
+  - amd64
+  stage: deploy
+  dependencies:
+    - build_dx12
+    - build_vulkan
+  script:
+    - echo "Packaging build"
+    - copy %VULKAN_SDK%\Bin\glslc.exe sample\bin
+    - echo cd .\sample\bin\ > %SampleName%_DX12.bat
+    - echo start %SampleName%_DX12.exe >> %SampleName%_DX12.bat
+    - echo cd .\sample\bin\ > %SampleName%_VK.bat
+    - echo start %SampleName%_VK.exe >> %SampleName%_VK.bat
+  artifacts:
+      name: "%SampleName%-%CI_COMMIT_TAG%-%CI_COMMIT_REF_NAME%-%CI_COMMIT_SHORT_SHA%"
+      paths:
+      - "sample/bin/"
+      - "sample/media/Cauldron-Media/AbandonedWarehouse/"
+      - "sample/media/Cauldron-Media/envmaps/"
+      - "sample/media/Cauldron-Media/noise/"
+      - "sample/media/Cauldron-Media/SciFiHelmet/"
+      - "readme.md"
+      - "license.txt"
+      - "%SampleName%_DX12.bat"
+      - "%SampleName%_VK.bat"

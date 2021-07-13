@@ -1,0 +1,75 @@
+{
+  "globals": {
+    "CpuValidationLayerEnabled": false,
+    "GpuValidationLayerEnabled": false,
+    "presentationMode": 0,
+    "width": 1920,
+    "height": 1080,
+    "activeScene": 0,
+    "benchmark": false,
+    "vsync": false,
+    "stablePowerState": false,
+    "FreesyncHDROptionEnabled": false,
+    "fontsize":  13,
+    "vulkanGlsl": true
+  },
+  "scenes": [
+  {
+      "name": "Warehouse",
+      "directory": "..\\media\\cauldron-media\\AbandonedWarehouse\\",
+      "filename": "AbandonedWarehouse.gltf",
+      "TAA": true,
+      "toneMapper": 0,
+      "iblFactor": 0.36,
+      "emmisiveFactor": 1,
+      "intensity": 10,
+      "exposure": 1.4,
+      "activeCamera": -1,
+      "camera": {
+        "defaultFrom": [ 1.184, -0.0275, -4.4 ],
+        "defaultTo": [ -3.69, -0.647, -4.3 ]
+      },
+      "BenchmarkSettings": {
+        "timeStep": 1,
+        "timeStart": 0,
+        "timeEnd": 10000,
+        "exitWhenTimeEnds": true,
+        "resultsFilename": "AbandonedWarehouse.csv",
+        "warmUpFrames": 200,
+        "sequence": {
+          "timeStart": 0,
+          "timeEnd": 2000,
+          "keyFrames": [
+            {
+              "time": 0,
+              "from": [ 5.13694048, 1.89175785, -1.40289795 ],
+              "to": [ 0.703276634, 1.02280307, 0.218072295 ],
+              "screenShotName": "camera1.jpg"
+            },
+            {
+              "time": 1000,
+              "from": [ -5.13694048, 1.89175785, -1.40289795 ],
+              "to": [ 0.703276634, 1.02280307, 0.218072295 ],
+              "screenShotName": "camera2.jpg"
+            }
+          ]
+        }
+      }
+    },    
+    {
+      "name": "SciFiHelmet",
+      "directory": "..\\media\\cauldron-media\\SciFiHelmet\\GLTF\\",
+      "filename": "SciFiHelmet.gltf",
+      "TAA": true,
+      "toneMapper": 0,
+      "iblFactor": 1,
+      "emmisiveFactor": 1,
+      "intensity": 50,
+      "exposure": 1.4,
+      "camera": {
+        "defaultFrom": [ 2.45, 0.3146, 2.478 ],
+        "defaultTo": [ 0, 0, 0 ]
+      }
+    }
+  ]
+}

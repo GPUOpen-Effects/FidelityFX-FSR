@@ -692,7 +692,7 @@ void FSRSample::BuildUI()
                 m_swapChain.SetVSync(m_VsyncEnabled);
             ImGui::Spacing();
             ImGui::Spacing();
-            const char* fullscreenModes[] = { "Windowed", "BorderlessFullscreen", "ExclusiveFulscreen" };
+            const char* fullscreenModes[] = { "Windowed", "BorderlessFullscreen", "ExclusiveFullscreen" };
             if (ImGui::Combo("Fullscreen Mode", (int*)&m_fullscreenMode, fullscreenModes, _countof(fullscreenModes)))
             {
                 if (m_previousFullscreenMode != m_fullscreenMode)

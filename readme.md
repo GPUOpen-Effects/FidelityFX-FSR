@@ -40,6 +40,7 @@ To build the FSR sample, please follow the following instructions:
 
 - [CMake 3.16](https://cmake.org/download/)
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+  - Install the "Desktop Development with C++" workload
 - [Windows 10 SDK 10.0.18362.0](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk)
 - [Git 2.32.0](https://git-scm.com/downloads)
 

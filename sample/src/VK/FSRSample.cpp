@@ -30,9 +30,9 @@ FSRSample::FSRSample(LPCSTR name) : FrameworkWindows(name)
     m_bPlay = true;
 
     m_pGltfLoader = NULL;
-    mipBias[0] = -0.3f;
-    mipBias[1] = -0.5f;
-    mipBias[2] = -0.7f;
+    mipBias[0] = -0.38f;
+    mipBias[1] = -0.585f;
+    mipBias[2] = -0.75f;
     mipBias[3] = -1.0f;
     mipBias[4] = 0.0f;
 }
@@ -718,7 +718,7 @@ void FSRSample::BuildUI()
             }
             ImGui::Spacing();
             ImGui::Spacing();
-            const char* fullscreenModes[] = { "Windowed", "BorderlessFullscreen", "ExclusiveFulscreen" };
+            const char* fullscreenModes[] = { "Windowed", "BorderlessFullscreen", "ExclusiveFullscreen" };
             if (ImGui::Combo("Fullscreen Mode", (int*)&m_fullscreenMode, fullscreenModes, _countof(fullscreenModes)))
             {
                 if (m_previousFullscreenMode != m_fullscreenMode)
@@ -945,7 +945,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
     LPSTR lpCmdLine,
     int nCmdShow)
 {
-    LPCSTR Name = "FidelityFX Super Resolution 1.0";
+    LPCSTR Name = "FidelityFX Super Resolution 1.0.2";
 
     // create new Vulkan sample
     return RunFramework(hInstance, lpCmdLine, nCmdShow, new FSRSample(Name));

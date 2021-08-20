@@ -62,7 +62,7 @@
 	#endif
 	#if SAMPLE_RCAS
 		#define FSR_RCAS_H
-		AH4 FsrRcasLoadH(ASW2 p) { return InputTexture.Load(ASW3(ASW2(p), 0)); }
+		AH4 FsrRcasLoadH(ASW2 p) { return (AH4)InputTexture.Load(ASW3(ASW2(p), 0)); }
 		void FsrRcasInputH(inout AH1 r,inout AH1 g,inout AH1 b){}
 	#endif
 #endif

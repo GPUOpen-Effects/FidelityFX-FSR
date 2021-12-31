@@ -164,18 +164,18 @@
 //==============================================================================================================================
 //                                     VECTOR ARGUMENT/RETURN/INITIALIZATION PORTABILITY
 //==============================================================================================================================
- #define retAD2 AD1 *A_RESTRICT
- #define retAD3 AD1 *A_RESTRICT
- #define retAD4 AD1 *A_RESTRICT
- #define retAF2 AF1 *A_RESTRICT
- #define retAF3 AF1 *A_RESTRICT
- #define retAF4 AF1 *A_RESTRICT
- #define retAL2 AL1 *A_RESTRICT
- #define retAL3 AL1 *A_RESTRICT
- #define retAL4 AL1 *A_RESTRICT
- #define retAU2 AU1 *A_RESTRICT
- #define retAU3 AU1 *A_RESTRICT
- #define retAU4 AU1 *A_RESTRICT
+ #define retAD2 AD1 *
+ #define retAD3 AD1 *
+ #define retAD4 AD1 *
+ #define retAF2 AF1 *
+ #define retAF3 AF1 *
+ #define retAF4 AF1 *
+ #define retAL2 AL1 *
+ #define retAL3 AL1 *
+ #define retAL4 AL1 *
+ #define retAU2 AU1 *
+ #define retAU3 AU1 *
+ #define retAU4 AU1 *
 //------------------------------------------------------------------------------------------------------------------------------
  #define inAD2 AD1 *A_RESTRICT
  #define inAD3 AD1 *A_RESTRICT

@@ -23,7 +23,7 @@ THE SOFTWARE.
 
 AMD FidelityFX Super Resolution (FSR) is an open source, high-quality solution for producing high resolution frames from lower resolution inputs.
 
-It uses a collection of cutting-edge algorithms with a particular emphasis on creating high-quality edges, giving large performance improvements compared to rendering at native resolution directly. FSR enables “practical performance” for costly render operations, such as hardware ray tracing.
+It uses a collection of cutting-edge algorithms with a particular emphasis on creating high-quality edges, giving large performance improvements as compared to rendering at native resolution directly. FSR enables “practical performance” for costly render operations like hardware ray tracing.
 
 - ffx-fsr contains the [FSR shader code](https://github.com/GPUOpen-Effects/FidelityFX-FSR/tree/master/ffx-fsr)
 - sample contains the [FSR sample](https://github.com/GPUOpen-Effects/FidelityFX-FSR/tree/master/sample)
